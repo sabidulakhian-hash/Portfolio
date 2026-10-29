@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal portfolio of Khian Sabidula, a BSIS student.">
+  <title>Khian Sabidula | Personal Portfolio</title>
+  <style>
+    :root {
+      --black: #111111;
+      --dark: #1b1b1b;
+      --gray: #777777;
+      --light: #f5f5f3;
+      --line: #dededb;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--light);
+      color: var(--black);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 40px clamp(22px, 7vw, 90px) 58px;
+      color: var(--white);
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.18) 38%, rgba(0,0,0,.82) 100%),
+        url("background.jpg");
+      background-size: cover;
+      background-position: center 43%;
+      background-color: var(--dark);
+    }
+
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 25px clamp(22px, 7vw, 90px);
+      background: linear-gradient(180deg, rgba(0,0,0,.3), transparent);
+    }
+    .brand {
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      white-space: nowrap;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: .82rem;
+      color: rgba(255,255,255,.9);
+    }
+    nav a:hover { opacity: .68; }
+
+    .intro { width: min(100%, 760px); }
+    .eyebrow {
+      margin-bottom: 14px;
+      font-size: .76rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.82);
+    }
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(3.2rem, 11vw, 7.5rem);
+      font-weight: 650;
+      line-height: .94;
+      letter-spacing: -.075em;
+    }
+    .intro p {
+      max-width: 540px;
+      font-size: clamp(.98rem, 2vw, 1.12rem);
+      color: rgba(255,255,255,.9);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-block;
+      padding: 11px 17px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 3px;
+      font-size: .88rem;
+      transition: .2s ease;
+    }
+    .button.primary { background: var(--white); color: var(--black); border-color: var(--white); }
+    .button:hover { transform: translateY(-2px); }
+
+    .content {
+      padding: 76px max(22px, calc((100% - 900px) / 2));
+      background: var(--light);
+      border-bottom: 1px solid var(--line);
+    }
+    .section-label {
+      margin-bottom: 13px;
+      color: var(--gray);
+      font-size: .75rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -.055em;
+    }
+    .content > p { max-width: 690px; color: #5f5f5f; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .card {
+      padding: 23px;
+      border: 1px solid #e1e1de;
+      border-radius: 5px;
+      background: var(--white);
+    }
+    .card h3 { margin-bottom: 7px; font-size: 1rem; }
+    .card p { color: #666; font-size: .92rem; }
+    .contact-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #333;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+    .contact-link:hover { text-decoration: underline; }
+    footer {
+      padding: 25px 22px 32px;
+      background: var(--light);
+      color: #777;
+      text-align: center;
+      font-size: .82rem;
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding: 36px 22px 42px;
+        background-position: center center;
+      }
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px 22px;
+      }
+      nav { gap: 14px; font-size: .75rem; }
+      h1 { font-size: clamp(3rem, 14vw, 5rem); }
+      .content { padding: 54px 22px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="home">
+      <header class="topbar">
+        <a class="brand" href="#home">KHIAN SABIDULA.</a>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#interests">Interests</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="intro">
+        <div class="eyebrow">BSIS Student · Personal Portfolio</div>
+        <h1>Hello,<br>I'm Khian.</h1>
+        <p>I'm a creative person who enjoys exploring new interests, learning new skills, and finding inspiration in everyday life. Welcome to my little corner of the internet.</p>
+        <div class="actions">
+          <a class="button primary" href="#about">Get to know me ↓</a>
+          <a class="button" href="#projects">Explore my work</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="about">
+      <div class="section-label">01 / About me</div>
+      <h2>A little about me.</h2>
+      <p>Hi, I'm Khian Sabidula, a second-year Bachelor of Science in Information Systems (BSIS) student at DFCAMCLP. I'm a creative person who enjoys discovering new things and learning at my own pace. I value being a good listener, solving problems, and making time for the things I love.</p>
+    </section>
+
+    <section class="content" id="interests">
+      <div class="section-label">02 / My interests</div>
+      <h2>Things I enjoy.</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Anime & K-dramas</h3>
+          <p>I enjoy watching anime and Korean dramas, especially stories that keep me interested in the characters and their journeys.</p>
+        </article>
+        <article class="card">
+          <h3>Dogs</h3>
+          <p>I love dogs and the happiness and companionship they bring.</p>
+        </article>
+        <article class="card">
+          <h3>Cooking</h3>
+          <p>I enjoy cooking and trying things in the kitchen.</p>
+        </article>
+        <article class="card">
+          <h3>Creative exploration</h3>
+          <p>I like exploring new interests, learning from experiences, and finding my own way to express ideas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content" id="skills">
+      <div class="section-label">03 / Skills</div>
+      <h2>What I bring.</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>HTML</h3>
+          <p>Learning to build and structure web pages using HTML.</p>
+        </article>
+        <article class="card">
+          <h3>Problem-solving</h3>
+          <p>Working through questions step by step and looking for practical solutions.</p>
+        </article>
+        <article class="card">
+          <h3>Good listener</h3>
+          <p>Listening carefully to people and trying to understand their ideas and perspectives.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content" id="projects">
+      <div class="section-label">04 / Projects</div>
+      <h2>My projects.</h2>
+      <p>I'm still building my portfolio. This section can feature my school assignments, website exercises, and other projects as I complete them.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>HTML Practice</h3>
+          <p>A collection of beginner web design exercises and pages created while learning HTML.</p>
+        </article>
+        <article class="card">
+          <h3>More projects coming soon</h3>
+          <p>I'll add more school and personal projects here as I continue learning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content" id="contact">
+      <div class="section-label">05 / Contact</div>
+      <h2>Let's connect.</h2>
+      <p>Thanks for visiting my portfolio. You can find my work on GitHub or send me an email.</p>
+      <a class="contact-link" href="mailto:sabidulakhian@gmail.com">sabidulakhian@gmail.com ↗</a><br>
+      <a class="contact-link" href="https://github.com/sabidulakhian-hash" target="_blank" rel="noopener noreferrer">github.com/sabidulakhian-hash ↗</a>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Khian Sabidula. Made with care.</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
